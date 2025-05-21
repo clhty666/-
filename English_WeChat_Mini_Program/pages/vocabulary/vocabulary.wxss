@@ -1,0 +1,98 @@
+/* pages/vocabulary/vocabulary.wxss */
+.container {
+  padding: 20rpx;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* 加载状态 */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+
+.loading-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 空状态 */
+.empty {
+  text-align: center;
+  padding-top: 200rpx;
+}
+
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  opacity: 0.5;
+}
+
+/* 列表容器 */
+.list-container {
+  height: calc(100vh - 40rpx);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.05);
+}
+
+/* 编辑状态 */
+.list-item.editing {
+  background: #fff8e1;
+}
+
+.word-info {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.word-id {
+  font-weight: bold;
+  color: #2196F3;
+}
+
+.added-time {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.details text {
+  display: block;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  color: #444;
+}
+
+/* 操作按钮 */
+.star-btn {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-icon {
+  width: 50rpx;
+  height: 50rpx;
+  transition: all 0.3s;
+}
+
+.star-btn:active .star-icon {
+  transform: scale(1.2);
+}

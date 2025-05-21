@@ -1,0 +1,48 @@
+<!-- pages/vocabulary/vocabulary.wxml -->
+<view class="container">
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <image src="/images/loading.png" class="loading-icon" />
+    <text>加载中...</text>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:elif="{{vocabList.length === 0}}" class="empty">
+    <image src="/images/edit.png" class="empty-icon" />
+    <text>生词本为空，快去添加单词吧～</text>
+  </view>
+
+  <!-- 生词列表 -->
+  <scroll-view wx:else class="list-container" scroll-y>
+    <!-- 修改后的wxml列表项 -->
+    <view 
+      wx:for="{{vocabList}}" 
+      wx:key="headWord" 
+      class="list-item {{currentEditId === item.headWord ? 'editing' : ''}}"
+    >
+      <view class="word-info">
+        <view class="header">
+          <text class="word-text">{{item.headWord}}</text>  <!-- 显示headWord -->
+          <text class="added-time">添加时间：{{item.addedTime}}</text>
+        </view>
+        
+        <view class="details">
+          <!--<text>当前阶段：{{item.stage}}</text>-->
+          <text>下次复习：{{item.nextReview}}</text>
+        </view>
+      </view>
+
+      <!-- 操作按钮 -->
+      <view 
+        class="star-btn" 
+        bindtap="handleEdit" 
+        data-word-id="{{item.wordId}}"
+      >
+        <image 
+          src="{{item.isStarred ? '/images/star-filled.png' : '/images/star-empty.png'}}" 
+          class="star-icon"
+        />
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,29 @@
+/* app.wxss */
+/* 基础样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* 全局按钮样式 */
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  position: relative;
+  border-radius: 48rpx !important;
+}
+
+button[type="primary"] {
+  background: #2196F3;
+}
+
+button::after {
+  display: none !important; /* 移除微信默认边框 */
+}
+
+/* 全局卡片阴影 */
+.card-shadow {
+  box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.1);
+}

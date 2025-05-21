@@ -1,0 +1,71 @@
+<!-- pages/learn/learn.wxml -->
+<view class="container" bindtap="handleTap">
+  <!-- 单词显示区域 -->
+  <view class="word-header">
+    <view class="word-block">
+      <text class="word-text">{{currentWord ? currentWord.head_word : ''}}</text>
+    </view>
+    <view class="star-btn" bindtap="toggleStar" catchtap>
+      <image 
+        src="{{currentWord && currentWord.is_starred ? '/images/star-filled.png' : '/images/star-empty.png'}}" 
+        class="star-icon"
+      />
+    </view>
+  </view>
+
+  <!-- 详细信息区域 -->
+  <view wx:if="{{showDetails}}" class="details-container">
+    <!-- 发音按钮 -->
+    <view class="pronounce-btns">
+      <button 
+        class="pronounce-btn" 
+        bindtap="playAudio" 
+        data-word="{{currentWord.head_word}}" 
+        data-type="2"
+      >美式发音</button>
+      <button 
+        class="pronounce-btn" 
+        bindtap="playAudio" 
+        data-word="{{currentWord.head_word}}" 
+        data-type="1"
+      >英式发音</button>
+    </view>
+
+    <!-- 数据展示 -->
+    <view class="data-section">
+      <panel-item 
+        title="翻译" 
+        data="{{currentWord.translations}}" 
+      />
+      <panel-item 
+        title="例句" 
+        data="{{currentWord.sentences}}" 
+      />
+      <panel-item 
+        title="短语" 
+        data="{{currentWord.phrases}}" 
+      />
+      <panel-item 
+        title="同根词" 
+        data="{{currentWord.related_words}}" 
+      />
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-btns">
+      <button 
+        class="btn remember-btn" 
+        bindtap="handleAction" 
+        data-type="remember"
+      >记住</button>
+      <button 
+        class="btn forget-btn" 
+        bindtap="handleAction" 
+        data-type="forget"
+      >忘记</button>
+    </view>
+  </view>
+
+  <!-- 进度提示 -->
+  <view wx:if="{{!isLastWord}}" class="next-tip">点击屏幕查看记忆对错</view>
+</view>

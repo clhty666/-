@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/learn/learn",
+    "pages/library/library",
+    "pages/settings/settings",
+    "pages/vocabulary/vocabulary",
+    "components/panel-item/panel-item",
+    "pages/word-list/word-list"
+  ],
+  "usingComponents": {
+    "panel-item": "/components/panel-item/panel-item"
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#2196F3",
+    "navigationBarTitleText": "英语单词学习",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f9fa"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#2196F3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "text": "学习",
+        "iconPath": "images/learn.png",
+        "selectedIconPath": "images/learn-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

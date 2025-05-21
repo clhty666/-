@@ -1,0 +1,40 @@
+<!-- components/panel-item/panel-item.wxml -->
+<view class="panel">
+  <view class="panel-title">{{title}}</view>
+  <view wx:for="{{data}}" wx:key="index" class="panel-item">
+    <view class="item-header" bindtap="toggleCollapse" data-index="{{index}}">
+      <text class="item-text">{{item.displayText}}</text>
+    </view>
+    <view wx:if="{{!item.collapsed}}" class="item-detail">
+      <!-- 翻译 -->
+      <block wx:if="{{title === '翻译'}}">
+        <view class="translation-detail">中译：
+          <text class="pos-tag">{{item.pos}}</text>
+          {{item.chinese}}
+        </view>
+        <view>英译：{{item.english}}</view>
+      </block>
+
+      <!-- 例句 -->
+      <block wx:if="{{title === '例句'}}">
+        <view class="example-cn">{{item.cn}}
+        {{item.en}}</view>
+      </block>
+
+      <!-- 短语 -->
+      <block wx:if="{{title === '短语'}}">
+        <view class="phrase-trans">{{item.trans}}
+        {{item.phrase}}</view>
+      </block>
+
+      <!-- 同根词 -->
+      <block wx:if="{{title === '同根词'}}">
+        <view class="related-info">
+          {{item.word}}
+          <text class="pos-tag">{{item.pos}}</text>
+          {{item.trans}}
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

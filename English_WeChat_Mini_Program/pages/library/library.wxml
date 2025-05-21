@@ -1,0 +1,24 @@
+<!-- pages/library/library.wxml -->
+<view class="container">
+  <view class="header">
+    <text>当前选择词库：{{selectedLib}}</text>
+  </view>
+
+  <scroll-view class="lib-list" scroll-y>
+    <block wx:for="{{libraries}}" wx:key="book_id">
+      <view 
+        class="lib-item {{item.book_name === selectedLib ? 'active' : ''}}" 
+        bindtap="selectLibrary" 
+        data-lib="{{item.book_name}}"
+      >
+        <text>{{item.book_name}}</text>
+        <text wx:if="{{item.book_name === selectedLib}}" class="checkmark">✓</text>
+        <button 
+          class="browse-btn" 
+          catchtap="handleViewWords" 
+          data-id="{{item.book_id}}"
+        >浏览词库</button>
+      </view>
+    </block>
+  </scroll-view>
+</view>

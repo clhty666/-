@@ -1,0 +1,19 @@
+<!-- pages/settings/settings.wxml -->
+<view class="container">
+  <view class="form-item">
+    <text class="label">当前每日目标：{{newGoal}} 词</text>
+    <input 
+      type="number" 
+      placeholder="输入新的每日目标" 
+      value="{{newGoal}}" 
+      bindinput="handleInput"
+      class="input"
+    />
+  </view>
+  
+  <button 
+    type="primary" 
+    bindtap="submitGoal" 
+    class="submit-btn"
+  >确认修改</button>
+</view>

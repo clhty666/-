@@ -1,0 +1,10 @@
+/* pages/word-list/word-list.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.word-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #000000;
+  font-size: 32rpx;
+}

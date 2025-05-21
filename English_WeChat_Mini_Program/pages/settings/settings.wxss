@@ -1,0 +1,19 @@
+/* pages/settings/settings.wxss */
+.form-item {
+  margin: 40rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+}
+
+.input {
+  height: 80rpx;
+  border: 1rpx solid #eee;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+}
+
+.submit-btn {
+  margin: 40rpx;
+}

@@ -1,0 +1,15 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="user-info">
+    <text class="info-item">微信ID: {{userInfo.wechatId}}</text>
+    <text class="info-item">每日目标: {{userInfo.dailyGoal}}词/天</text>
+    <text class="info-item">当前词库: {{userInfo.selectedLib}}</text>
+  </view>
+
+  <view class="btn-group">
+    <button bindtap="goToVocab" type="primary" class="btn">生词本</button>
+    <button bindtap="goToLibrary" class="btn">选择词库</button>
+    <button bindtap="goToSettings" class="btn">修改目标</button>
+    <button bindtap="logout" class="btn logout-btn">退出登录</button>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!-- pages/word-list/word-list.wxml -->
+<view class="container">
+  <block wx:if="{{!isLoading}}">
+    <view wx:for="{{words}}" wx:key="id" class="word-item">
+      {{item.word}}
+    </view>
+  </block>
+  
+  <block wx:else>
+    <text>加载中...</text>
+  </block>
+</view>

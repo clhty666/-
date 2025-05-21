@@ -1,0 +1,93 @@
+/* pages/learn/learn.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.word-header {
+  height: 25vh;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.word-block {
+  text-align: center;
+}
+
+.word-text {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #2196F3;
+}
+
+.star-btn {
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+}
+
+.star-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.details-container {
+  flex: 1;
+  padding: 30rpx;
+}
+
+.pronounce-btns {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.pronounce-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background: #f5f5f5;
+  border-radius: 40rpx;
+}
+
+.data-section {
+  margin-bottom: 40rpx;
+}
+
+.action-btns {
+  display: flex;
+  gap: 30rpx;
+  position: fixed;
+  bottom: 60rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+
+.btn {
+  flex: 1;
+  height: 100rpx;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+}
+
+.remember-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.forget-btn {
+  background: #ff4444;
+  color: white;
+}
+
+.next-tip {
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+  padding: 20rpx;
+}

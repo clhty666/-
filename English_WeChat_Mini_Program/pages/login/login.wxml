@@ -1,0 +1,27 @@
+<!-- pages/login/login.wxml -->
+<view class="container">
+  <image src="/images/star-empty.png" class="logo"></image>
+  
+  <input 
+    placeholder="请输入手机号" 
+    value="{{inputId}}" 
+    bindinput="handleInput"
+    class="input"
+  />
+  
+  <button 
+    type="primary" 
+    bindtap="handleLogin"
+    class="login-btn"
+  >登录</button>
+
+  <!--<button 
+    class='login-btn' 
+    type='primary' 
+    open-type="getPhoneNumber" 
+    lang="zh_CN" 
+    bindgetphonenumber="bindGetUserInfo"
+  >微信手机号一键登录</button>
+-->
+
+</view>
